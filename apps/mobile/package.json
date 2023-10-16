@@ -21,7 +21,8 @@
     "react-native-reanimated": "*",
     "react-native-safe-area-context": "*",
     "react-native-screens": "*",
-    "@react-native-community/masked-view": "*"
+    "@react-native-community/masked-view": "*",
+    "tslib": "*"
   },
   "scripts": {
     "eas-build-pre-install": "cd ../../ && node tools/scripts/eas-build-pre-install.mjs . apps/mobile && cp package-lock.json apps/mobile",
