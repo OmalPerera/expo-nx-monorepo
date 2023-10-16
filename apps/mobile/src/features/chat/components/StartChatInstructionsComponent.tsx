@@ -3,7 +3,7 @@ import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
 import { colors } from '../../../utils';
 import images from '@m-repo/assets';
-import Config from 'react-native-config';
+// import Config from 'react-native-config';
 
 const StartChatInstructionsComponent = () => {
   return (
@@ -29,12 +29,12 @@ const StartChatInstructionsComponent = () => {
             Type your first message below.
           </Text>
           <Text>Type your first message below.</Text>
-          <Text className="text-[3vh] uppercase font-bold text-yellow998shade">
+          {/* <Text className="text-[3vh] uppercase font-bold text-yellow998shade">
             This styles from tailwind
           </Text>
           <Text style={styles.instructionText}>
             {'This is from -' + Config.APP_SUFFIX + '- env config'}
-          </Text>
+          </Text> */}
         </View>
       </View>
     </View>
