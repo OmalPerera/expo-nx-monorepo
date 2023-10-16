@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@m-repo/theme": ["shared/theme/src/index.ts"],
       "@m-repo/types": ["shared/types/src/index.ts"]
     }
   },
