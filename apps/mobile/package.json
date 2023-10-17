@@ -33,7 +33,9 @@
     "react-redux": "*",
     "redux": "*",
     "redux-thunk": "*",
-    "@nx/devkit": "*"
+    "@nx/devkit": "*",
+    "tailwindcss": "*",
+    "@types/react-native": "*"
   },
   "scripts": {
     "eas-build-pre-install": "cd ../../ && node tools/scripts/eas-build-pre-install.mjs . apps/mobile && cp package-lock.json apps/mobile",
@@ -42,6 +44,8 @@
     "ios": "expo run:ios"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/core": "^7.20.0",
+    "@types/react-native": "^0.72.3",
+    "tailwindcss": "*"
   }
 }

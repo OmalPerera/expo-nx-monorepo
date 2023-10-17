@@ -9,7 +9,7 @@ const NavBarComponent = ({ onRightBtnPress, onMenuPress }) => {
       <TouchableOpacity style={styles.menuBtn} onPress={onMenuPress}>
         <Image source={images.menu} style={styles.menuImg} />
       </TouchableOpacity>
-      <Text style={styles.chatNameTxt}>Chat Name</Text>
+      <Text style={styles.chatNameTxt}>EXPO Chat</Text>
       <TouchableOpacity onPress={onRightBtnPress}>
         <Image source={images.botHeadshot} style={styles.botImg} />
       </TouchableOpacity>

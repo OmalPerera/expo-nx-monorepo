@@ -1,4 +1,3 @@
-/* eslint-disable @nx/enforce-module-boundaries */
 import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
 import { colors } from '../../../utils';
@@ -29,10 +28,10 @@ const StartChatInstructionsComponent = () => {
             Type your first message below.
           </Text>
           <Text>Type your first message below.</Text>
-          {/* <Text className="text-[3vh] uppercase font-bold text-yellow998shade">
+          <Text className="text-[3vh] uppercase font-bold text-yellow998shade">
             This styles from tailwind
           </Text>
-          <Text style={styles.instructionText}>
+          {/* <Text style={styles.instructionText}>
             {'This is from -' + Config.APP_SUFFIX + '- env config'}
           </Text> */}
         </View>
