@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import NavBarComponent from '../components/NavBarComponent';
 import InputComponent from '../components/InputComponent';
-import StartChatInstructionsComponent from '../components/StartChatInstructionsComponent';
+import StartChatInstructionsComponent from '../components/StartChatInstructionsComponent.tsx';
 import { useDispatch, useSelector } from 'react-redux';
 import { ConversationType } from '@m-repo/types';
 import ChatBubbleComponent from '../components/ChatBubble';
