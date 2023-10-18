@@ -27,8 +27,9 @@ const StartChatInstructionsComponent = () => {
           <Text style={styles.instructionDetails}>
             Type your first message below.
           </Text>
-          <Text>Type your first message below.</Text>
-          <Text className="text-white">This styles from tailwind</Text>
+          <Text className="text-[2vh] uppercase font-bold  text-yellow998shade ">
+            This styles from tailwind
+          </Text>
           {/* <Text style={styles.instructionText}>
             {'This is from -' + Config.APP_SUFFIX + '- env config'}
           </Text> */}
