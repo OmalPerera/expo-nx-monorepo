@@ -37,7 +37,8 @@
     "tailwindcss": "3.3.2",
     "@types/react-native": "*",
     "@types/react": "*",
-    "typescript": "*"
+    "typescript": "*",
+    "expo-dev-client": "~2.4.11"
   },
   "scripts": {
     "eas-build-pre-install": "cd ../../ && node tools/scripts/eas-build-pre-install.mjs . apps/mobile && cp package-lock.json apps/mobile",

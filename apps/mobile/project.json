@@ -35,6 +35,30 @@
       "executor": "@nx/expo:build",
       "options": {}
     },
+    "eas-build-android-production": {
+      "executor": "@nx/expo:build",
+      "options": {
+        "platform": "android",
+        "json": true,
+        "profile": "production",
+        "interactive": false,
+        "local": false,
+        "wait": true,
+        "clearCache": true,
+        "autoSubmitWithProfile": "production"
+      }
+    },
+    "eas-build-android-dev": {
+      "executor": "@nx/expo:build",
+      "options": {
+        "platform": "android",
+        "json": true,
+        "profile": "development",
+        "interactive": false,
+        "wait": true,
+        "clearCache": true
+      }
+    },
     "submit": {
       "executor": "@nx/expo:submit",
       "options": {}
