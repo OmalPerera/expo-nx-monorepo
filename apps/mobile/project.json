@@ -24,11 +24,21 @@
         "platform": "ios"
       }
     },
-    "run-android": {
+    "run-android-dev": {
       "executor": "@nx/expo:run",
       "dependsOn": ["ensure-symlink", "sync-deps"],
       "options": {
-        "platform": "android"
+        "platform": "android",
+        "variant": "debug"
+      }
+    },
+    "run-android-prod": {
+      "executor": "@nx/expo:run",
+      "dependsOn": ["ensure-symlink", "sync-deps"],
+      "options": {
+        "platform": "android",
+        "variant": "release",
+        "clean": true
       }
     },
     "build": {

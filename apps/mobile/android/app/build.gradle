@@ -63,6 +63,13 @@ react {
  */
 def enableProguardInReleaseBuilds = (findProperty('android.enableProguardInReleaseBuilds') ?: false).toBoolean()
 
+project.ext.envConfigFiles = [
+    debug: "env/.env.dev",
+    release: "env/.env.production",
+]
+
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
+
 /**
  * The preferred build flavor of JavaScriptCore (JSC)
  *
