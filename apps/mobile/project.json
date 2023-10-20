@@ -17,24 +17,49 @@
         "command": "nx start mobile"
       }
     },
-    "run-ios": {
+    "run-ios-dev": {
       "executor": "@nx/expo:run",
-      "dependsOn": ["ensure-symlink", "sync-deps"],
+      "dependsOn": ["mount-env-dev", "ensure-symlink", "sync-deps"],
       "options": {
         "platform": "ios"
       }
     },
+    "run-ios-qa": {
+      "executor": "@nx/expo:run",
+      "dependsOn": ["mount-env-qa", "ensure-symlink", "sync-deps"],
+      "options": {
+        "platform": "ios"
+      }
+    },
+    "run-ios-prod": {
+      "executor": "@nx/expo:run",
+      "dependsOn": ["mount-env-prod", "ensure-symlink", "sync-deps"],
+      "options": {
+        "platform": "ios",
+        "clean": true
+      }
+    },
     "run-android-dev": {
       "executor": "@nx/expo:run",
-      "dependsOn": ["ensure-symlink", "sync-deps"],
+      "dependsOn": ["mount-env-dev", "ensure-symlink", "sync-deps"],
       "options": {
         "platform": "android",
-        "variant": "debug"
+        "variant": "debug",
+        "clean": true
+      }
+    },
+    "run-android-qa": {
+      "executor": "@nx/expo:run",
+      "dependsOn": ["mount-env-qa", "ensure-symlink", "sync-deps"],
+      "options": {
+        "platform": "android",
+        "variant": "release",
+        "clean": true
       }
     },
     "run-android-prod": {
       "executor": "@nx/expo:run",
-      "dependsOn": ["ensure-symlink", "sync-deps"],
+      "dependsOn": ["mount-env-prod", "ensure-symlink", "sync-deps"],
       "options": {
         "platform": "android",
         "variant": "release",
@@ -137,6 +162,30 @@
           "ci": true,
           "codeCoverage": true
         }
+      }
+    },
+    "clean-gradle": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "cd apps/mobile/android && ./gradlew clean && cd ../../.."
+      }
+    },
+    "mount-env-dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "cd apps/mobile/env && cp .env.dev .env && cd ../../.."
+      }
+    },
+    "mount-env-prod": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "cd apps/mobile/env && cp .env.prod .env && cd ../../.."
+      }
+    },
+    "mount-env-qa": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "cd apps/mobile/env && cp .env.qa .env && cd ../../.."
       }
     }
   },

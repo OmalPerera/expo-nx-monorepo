@@ -26,12 +26,13 @@ const customConfig = {
     unstable_enablePackageExports: true,
     unstable_conditionNames: ['browser', 'require', 'react-native'],
   },
+  resetCache: true, //added due to dot-env is getting cached ion ios
 };
 
 module.exports = withNxMetro(mergeConfig(defaultConfig, customConfig), {
   // Change this to true to see debugging info.
   // Useful if you have issues resolving modules
-  debug: true,
+  debug: false,
   // all the file extensions used for imports other than 'ts', 'tsx', 'js', 'jsx', 'json'
   extensions: [],
   // Specify folders to watch, in addition to Nx defaults (workspace libraries and node_modules)

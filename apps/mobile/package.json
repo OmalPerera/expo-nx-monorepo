@@ -44,6 +44,7 @@
     "eas-build-pre-install": "cd ../../ && node tools/scripts/eas-build-pre-install.mjs . apps/mobile && cp package-lock.json apps/mobile",
     "eas-build-post-install": "cd ../../ && node tools/scripts/eas-build-post-install.mjs . apps/mobile",
     "android": "expo run:android",
+    "android-prod": "cross-env APP_ENV=production expo run:android",
     "ios": "expo run:ios"
   },
   "devDependencies": {
