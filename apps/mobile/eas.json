@@ -1,11 +1,19 @@
 {
   "build": {
     "production": {
+      "env": {
+        "API_URL": "https://prod.myapi.com",
+        "ENV_SUFFIX ": "PROD-0953"
+      },
       "android": {
         "buildType": "app-bundle"
       }
     },
     "development": {
+      "env": {
+        "API_URL": "https://dev.myapi.com",
+        "ENV_SUFFIX ": "DEV-1504"
+      },
       "developmentClient": true,
       "distribution": "internal",
       "ios": {
@@ -17,6 +25,10 @@
       }
     },
     "qa": {
+      "env": {
+        "API_URL": "https://test.myapi.com",
+        "ENV_SUFFIX ": "QA-1504"
+      },
       "developmentClient": true,
       "distribution": "internal",
       "ios": {

@@ -33,6 +33,9 @@ const StartChatInstructionsComponent = () => {
           <Text style={styles.instructionText}>
             {'This is from -' + ENV_SUFFIX + '- dot-env config'}
           </Text>
+          <Text style={styles.instructionText}>
+            {'process.env -' + JSON.stringify(process.env)}
+          </Text>
         </View>
       </View>
     </View>
