@@ -267,4 +267,3 @@ npm-debug.*
 web-build/
 cache/
 
-apps/mobile/env/.env

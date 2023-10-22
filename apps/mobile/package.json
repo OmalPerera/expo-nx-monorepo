@@ -26,7 +26,6 @@
     "nativewind": "*",
     "react": "*",
     "react-native": "*",
-    "react-native-config": "*",
     "react-native-gesture-handler": "*",
     "react-native-reanimated": "*",
     "react-native-safe-area-context": "*",
@@ -38,7 +37,8 @@
     "redux-thunk": "*",
     "tailwindcss": "3.3.2",
     "tslib": "*",
-    "typescript": "*"
+    "typescript": "*",
+    "expo-updates": "*"
   },
   "scripts": {
     "eas-build-pre-install": "cd ../../ && node tools/scripts/eas-build-pre-install.mjs . apps/mobile && cp package-lock.json apps/mobile",

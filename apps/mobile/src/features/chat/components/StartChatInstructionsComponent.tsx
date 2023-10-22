@@ -2,7 +2,6 @@ import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
 import { colors } from '../../../utils';
 import images from '@m-repo/assets';
-//import Config from 'react-native-config';
 import { ENV_SUFFIX } from '@env';
 
 const StartChatInstructionsComponent = () => {
@@ -31,9 +30,6 @@ const StartChatInstructionsComponent = () => {
           <Text className="text-[2vh] uppercase font-bold  text-yellow998shade ">
             This styles from tailwind
           </Text>
-          {/* <Text style={styles.instructionText}>
-            {'This is from -' + Config.APP_SUFFIX + '- env config'}
-          </Text> */}
           <Text style={styles.instructionText}>
             {'This is from -' + ENV_SUFFIX + '- dot-env config'}
           </Text>
